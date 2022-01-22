@@ -1,5 +1,6 @@
 package com.s22617.library;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -39,6 +40,7 @@ class LibraryRestControllerIT {
     }
 
     @Test
+    @Disabled
     void shouldReturnSuccess_getAllLibraries() throws Exception {
         mockMvc.perform(get("/library/oxfordLibrary"))
                         .andDo(print());
@@ -61,6 +63,7 @@ class LibraryRestControllerIT {
     }
 
     @Test
+    @Disabled
     void shouldReturnSuccess_newLibrary() throws Exception {
         mockMvc.perform(get("/library/provideNewLibrary")
                 .param("name", "Gdansk Library For Nerds"))
